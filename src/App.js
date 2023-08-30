@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
   
@@ -28,22 +29,22 @@ function App() {
 
 
   return(
-    <>
-    <header>
-      <h1>ReactDo</h1>
+    <div className="caixa">
+    <header className="titulo">
+      <h1> To-do List</h1>
     </header>
       <div>
-        <input type="text" name="tarefa" placeholder="Digite sua tarefa" value={tarefa.texto} onChange={(e) => setTarefa( { id: Math.random(), texto: e.target.value, status: false } )}></input>
-        <button onClick={addTarefa}>Adicionar</button>
+        <input className="texto" type="text" name="tarefa" placeholder="Digite sua tarefa" value={tarefa.texto} onChange={(e) => setTarefa( { id: Math.random(), texto: e.target.value, status: false } )}></input>
+        <button className="add" onClick={addTarefa}>Adicionar</button>
       </div>
-      <div>
+      <div className="lista">
         <ul>
           {listaTarefas.map((item, index)=>(
-              <li key={index}>{item.texto}<button onClick={() => statusTarefa(item.id , item.status)}>{item.status ? 'Concluida' : 'Não concluida'}</button><button onClick={() => excluirTarefa(item.id)}>Excluir</button></li>
+              <li className={item.status ? 'itemAtivo' : 'itemInativo'} key={index}>{item.texto}<button onClick={() => statusTarefa(item.id , item.status)}>{item.status ? <i class="fa-solid fa-heart"></i> : <i class="fa-solid fa-x"></i>}</button><button onClick={() => excluirTarefa(item.id)}><i class="fa-solid fa-trash"></i></button></li>
           ))}
         </ul>
       </div>
-    </>
+    </div>
   )
 }
 

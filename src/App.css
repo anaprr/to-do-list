@@ -1,0 +1,62 @@
+body{
+    background-color: deeppink;
+}
+@font-face{
+    font-family: "fonte";
+    src: url("font/New\ Burger.otf");
+}
+.titulo{
+    color: black;
+    text-align: center;
+    font-family: "fonte";
+}
+.texto{
+    border-radius: 10px;
+    text-align: center;
+    width: 380px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.741);
+    margin-left: 26%;
+}
+.add{
+    background-color: rgba(255, 255, 255, 0.741);
+    margin: 2%;
+    margin-left: 43%;
+    font-family: "fonte";
+    border-radius: 10px;
+    width: 121px;
+    height: 35px;
+}
+.itemAtivo{
+    list-style-type: none;
+    text-align: center;
+    color: rgba(90, 90, 90, 0.604);
+    text-decoration: line-through;
+}
+.itemInativo{
+    list-style-type: none;
+
+}
+li{
+    width: 50%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.741);
+    text-align: center;
+    font-family: "fonte";
+    margin-left: 23%;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    align-items: center;
+    border: solid 2px;
+}
+.caixa{
+    background-color: rgba(255, 255, 255, 0.614);
+    width: 50%;
+    margin-left: 25%;
+    border: solid 2px;
+    margin-top: 2.5%;
+    border-radius: 10px;
+}
+
+
